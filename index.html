@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vansh Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav-left">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+
+      <div class="logo">Vansh</div>
+      <ul class="nav-right">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        <li class="dropdown">
+          <a href="#">Achievements ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+            <li><a href="https://geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+ <section class="hero-v3">
+  <div class="hello-outline">Hello!</div>
+  <div class="hero-main-row">
+    <!-- Left: Quote -->
+    <div class="hero-left">
+        <div class="dog-pic">
+            <img src="Dog.png" alt="Dog" />
+        </div>
+        <p class="quote">“I build clean, full-stack apps and solve real-world problems with code.”</p>
+        <p class="dsa-count">500+ DSA Questions Solved</p>
+    </div>
+    <!-- Center: Image + Text -->
+    <div class="image-box">
+        <!-- <div class="orbit-wrapper" onclick="triggerDarkTransition()">
+        <div class="orbit-circle">
+        <img id="orbitSun" class="sun-icon" src="sun.png" alt="Sun Icon" />
+        </div>
+        </div> -->
+    <div class="circle-bg"></div>
+    <h2 class="behind-text">I'm Vansh,<br>Software Developer</h2>
+    <img src="Adobe Express - file (1).png" alt="Vansh Minecraft" class="character-img" />
+    </div>
+    <!-- Right: Experience -->
+    <div class="hero-right">
+      <p class="experience-title">3+ Years Of Coding</p>
+    </div>
+  </div>
+</section>
+<!-- <section class="dog-section">
+  <div class="dog-container">
+    <img src="Dog.png" alt="Cute Minecraft Dog" />
+  </div>
+</section> -->
+
+<section class="skills-section">
+  <h2 class="skill-outline"><span class="highlight-orange">My</span> Skills</h2>
+  <p class="skills-subtext">Here’s what I’m great at and where I bring value.</p>
+
+  <div class="skills-cards">
+    <!-- Skill 1 -->
+    <div class="skill-card">
+      <div class="card-stack">
+        <img src="Backend.png" alt="API Development"/>
+      </div>
+      <h3 class = "skillcard-text">“APIs that just work”</h3>
+      <h3 class = "skillcard-text">“Powerful logic behind the scenes”</h3>
+      
+    </div>
+
+    <!-- Skill 2 - highlighted center -->
+    <div class="skill-card">
+      <div class="card-stack">
+        <img src="DBMS.png" alt="DBMS"/>
+      </div>
+      <h3 class = "skillcard-text">“Data that flows like water”</h3>
+    </div>
+
+    <!-- Skill 3 -->
+    <div class="skill-card">
+      <div class="card-stack">
+        <img src="Frontend.png" alt="Frontend Development"/>
+      </div>
+      <h3 class = "skillcard-text">“Pixel-perfect interfaces”</h3>
+      
+    </div>
+  </div>
+</section>
+<section class="experience-section">
+  <h2 class="section-title">My Work Experience</h2>
+
+  <div class="timeline">
+    <!-- Experience 1 -->
+    <div class="timeline-row">
+      <div class="timeline-left">
+        <h3>Smart India Hackathon (SIH)</h3>
+        <p>Team Leader • Mar 2024 – July 2024</p>
+      </div>
+      <div class="timeline-dot orange-dot"></div>
+      <div class="timeline-right">
+        <h4>Led a team of 6</h4>
+        <p>Secured 7th position in DTU inter-college round with a hospital management solution during SIH.</p>
+      </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="timeline-row">
+      <div class="timeline-left">
+        <h3>Feat: The Career Institute</h3>
+        <p>Intern • June 2025 – July 2025</p>
+      </div>
+      <div class="timeline-dot dark-dot"></div>
+      <div class="timeline-right">
+        <h4>Backend Developer Intern</h4>
+        <p>Worked on developing REST APIs and integrating backend systems to support the web platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="projects-section">
+  <h2>Let’s Have a Look at my <span class="highlight">Projects</span></h2>
+
+  <div class="project-container">
+    <button class="carousel-btn" onclick="prevProject()">&#8592;</button>
+
+    <div id="projectDisplay" class="project-card">
+      <!-- JS will inject content here -->
+    </div>
+
+    <button class="carousel-btn" onclick="nextProject()">&#8594;</button>
+  </div>
+
+  <button class="see-more">See More ↗</button>
+</section>
+<script src="script.js"></script>
+
+<!-- Floating Enderman Toggle -->
+<!-- Floating Enderman Toggle -->
+<div id="endermanToggle" onclick="toggleDarkMode()">
+  <img id="endermanImg" src="BlackEnder.png" alt="Enderman Toggle">
+</div>
+</body>
+</html>

@@ -1,0 +1,811 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+/* Header container */
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 40px;
+  margin: 30px auto 0 auto; /* Top gap */
+  border-radius: 40px; /* Rounder corners */
+  max-width: 1800px; /* Left & right space on large screens */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar layout */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Nav sections */
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nav links */
+.nav-left li a,
+.nav-right li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-left li a:hover,
+.nav-right li a:hover {
+  color: #ff3c00; /* Darker orange */
+}
+
+/* Logo in center */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.logo .orbit-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.logo .orbit-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate-sun 8s linear infinite;
+}
+
+.logo .sun-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  top: 30px;
+  right: 0;
+  min-width: 160px;
+  z-index: 10;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown-content li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #333;
+  color: #ff6600; /* Darker orange on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Section below the header starts from here */
+
+.hero-v3 {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.hello-outline {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid black;
+  border-radius: 30px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+.skill-outline {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+/* Main 3-column layout */
+.hero-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Quote */
+.hero-left {
+  flex: 1 1 250px;
+  text-align: left;
+}
+
+.quote {
+  font-size: 1.5rem;
+  
+  font-style: bold;
+  color: #000;
+  margin: 0;
+}
+
+.dsa-count {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff6600;
+  font-size: 1.3rem;
+}
+
+/* Center Image */
+.image-box {
+  position: relative;
+  width: 520px;
+  height: 520px;
+  flex-shrink: 0;
+}
+.image-box, .character-img {
+  z-index: 2;
+}
+.circle-bg {
+  position: absolute;
+  width: 440px;
+  height: 270px;
+  background: #ff3c00;
+  border-top-left-radius: 370px;
+  border-top-right-radius: 370px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.behind-text {
+  font-family: "Pixelify Sans", sans-serif;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000; /* Black now */
+  z-index: 1;
+  text-align: center;
+}
+
+.character-img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -162px;
+}
+
+/* Right: Experience */
+.hero-right {
+  flex: 1 1 250px;
+  text-align: right;
+}
+
+.experience-title {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-main-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    text-align: center;
+  }
+
+  .experience-title {
+    margin-top: 20px;
+  }
+}
+
+/*Skills sections starts here*/
+
+.skills-section {
+  padding: 60px 20px;
+  background: #1c1c1c;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.highlight-orange {
+  color: #ff6600;
+}
+
+.skills-subtext {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.skills-cards {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-card {
+  height: 500px; /* Or whatever fits your layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+.skill-card h3 {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.skill-card img {
+  /* height: 200px;
+  object-fit: cover;
+  border-radius: 10px; */
+  width: 100%;
+  border-radius: 14px;
+}
+
+.card-stack {
+  position: relative;
+}
+
+.arrow-btn {
+  width: 36px;
+  height: 36px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.arrow-btn:hover {
+  background: #ff6600;
+}
+
+.skill-card.highlight {
+  background: #ff6600;
+  color: #000;
+}
+
+.skill-card.highlight h3 {
+  color: #fff;
+}
+
+.skill-card.highlight .arrow-btn {
+  background: #fff;
+  color: #ff6600;
+}
+
+.skill-card.highlight .arrow-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.skillcard-text {
+  font-family: "Pixelify Sans", sans-serif;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; /* Black now */
+  z-index: 1;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*My Experience Starts from here*/
+
+.experience-section {
+  padding: 60px 40px; /* add more horizontal padding */
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1.5fr 40px 2fr; /* adjust ratio if needed */
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px; /* wider than before */
+}
+
+.timeline-left,
+.timeline-right {
+  text-align: left;
+}
+
+.timeline-left h3,
+.timeline-right h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.timeline-left p,
+.timeline-right p {
+  margin: 5px 0 0 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px dotted #ccc;
+  background-color: #333;
+  margin: auto;
+}
+
+.orange-dot {
+  background-color: #ff6600;
+}
+
+.dark-dot {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .timeline-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .timeline-dot {
+    display: none;
+  }
+  .project-images img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/*Here My Portfolio Project Show Case Starts*/
+
+.projects-section {
+    
+  padding: 60px 40px;
+  text-align: center;
+  background: #fff;
+  width: 100%;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: orange;
+}
+
+.carousel {
+  max-width: 1500px; /* or even 1300px */
+  margin: 0 auto;
+  gap: 20px;
+}
+
+
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1500px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1;
+  max-width: 850px; /* increased from 850px */
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+
+.project-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap; /* no wrap! forces side by side */
+}
+
+
+.project-images img {
+  width: 48%; /* slightly less than half */
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid orange;
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.project-card p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.project-card .tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card .tags span {
+  background: #ff6600;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.carousel-btn {
+  background: orange;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.see-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.features-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #000;
+  text-align: center;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  max-width: 650px;
+  margin: 0 auto 20px auto;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.feature-list li {
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.project-images img:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+
+/*Dark Mode And shit*/
+/* SUN & MOON ORBIT ANIMATION */
+.orbit-wrapper {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+.orbit-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate-sun 10s linear infinite;
+  z-index: 5;
+}
+
+.sun-icon {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  z-index: 6;
+}
+
+@keyframes rotate-sun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DARK MODE COLORS */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Header dark */
+body.dark-mode .header {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Hero Section */
+body.dark-mode .quote,
+body.dark-mode .behind-text,
+/* body.dark-mode .dsa-count, */
+body.dark-mode .experience-title {
+  color: #fff;
+  border-color: #fff; /* This changes the underline to white */
+}
+body.dark-mode .hello-outline {
+  color: #fff;
+}
+
+body.dark-mode .hello-outline {
+  border-color: #fff;
+}
+
+/* Skills Section */
+body.dark-mode .skills-section {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+body.dark-mode .skill-card {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Experience Section */
+body.dark-mode .experience-section {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .timeline-left h3,
+body.dark-mode .timeline-right h4,
+body.dark-mode .timeline-left p,
+body.dark-mode .timeline-right p {
+  color: #ccc;
+}
+
+/* Projects Section */
+body.dark-mode .projects-section {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .project-card {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+body.dark-mode .features-title {
+  color: #fff;
+}
+/* .features-title {
+  transition: color 0.3s ease;
+} */
+
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p,
+body.dark-mode .project-card li {
+  color: #fff;
+}
+
+body.dark-mode .tags span {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Enderman Button (Optional if using an image switch) */
+body.dark-mode .enderman-icon img.black-version {
+  display: none;
+}
+
+body.dark-mode .enderman-icon img.white-version {
+  display: block;
+}
+
+/*Bitch As Dog*/
+
+.dog-pic img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .dog-section {
+  display: flex;
+  justify-content: flex-start;
+  padding: 40px 20px 0 40px;
+  background: transparent;
+}
+
+.dog-container img {
+  width: 180px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+} */
+
+/* Optional: floating animation */
+/* @keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+} */
+
+/*Endermen for darkmode*/
+#endermanToggle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#endermanToggle img {
+  width: 250px; /* You can make this even bigger if needed */
+  height: auto;
+}
+
+#endermanToggle:hover img {
+  transform: scale(1.1);
+}
