@@ -137,19 +137,74 @@
 
   <div class="project-container">
     <button class="carousel-btn" onclick="prevProject()">&#8592;</button>
-
-    <div id="projectDisplay" class="project-card">
-      <!-- JS will inject content here -->
-    </div>
-
+    <div id="projectDisplay" class="project-card"></div>
     <button class="carousel-btn" onclick="nextProject()">&#8594;</button>
   </div>
 
   <button class="see-more">See More ↗</button>
 </section>
+
+<section class="proficiency-section">
+  <div class="pickaxe-wrapper">
+
+    <!-- Left Pickaxe + Particles -->
+    <div class="pickaxe-group">
+      <img src="leftPick.png" class="pickaxe-left" alt="Pickaxe Left">
+      <div class="particles-left">
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+      </div>
+    </div>
+
+    <!-- Technical Proficiency Content -->
+    <div class="proficiency-content">
+      <h2 class="section-title">My Technical Proficiency</h2>
+      <div class="proficiency-grid">
+        <!-- Frontend Card -->
+        <div class="proficiency-card">
+          <h3>Frontend Development</h3>
+          <p>11 months+ experience</p>
+          <div class="skill-bar"><div class="skill-label"><span>HTML</span><span class="percent">80%</span></div><div class="bar"><div style="width: 80%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>CSS</span><span class="percent">70%</span></div><div class="bar"><div style="width: 70%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>React</span><span class="percent">90%</span></div><div class="bar"><div style="width: 90%"></div></div></div>
+        </div>
+
+        <!-- Backend Card -->
+        <div class="proficiency-card">
+          <h3>Backend Development</h3>
+          <p>8 months+ experience</p>
+          <div class="skill-bar"><div class="skill-label"><span>Node.js</span><span class="percent">60%</span></div><div class="bar"><div style="width: 60%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>Express</span><span class="percent">50%</span></div><div class="bar"><div style="width: 50%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>MongoDB</span><span class="percent">90%</span></div><div class="bar"><div style="width: 90%"></div></div></div>
+        </div>
+
+        <!-- Language Card -->
+        <div class="proficiency-card">
+          <h3>Languages</h3>
+          <p>12 months+ experience</p>
+          <div class="skill-bar"><div class="skill-label"><span>JavaScript</span><span class="percent">60%</span></div><div class="bar"><div style="width: 60%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>C++</span><span class="percent">80%</span></div><div class="bar"><div style="width: 80%"></div></div></div>
+          <div class="skill-bar"><div class="skill-label"><span>Python</span><span class="percent">80%</span></div><div class="bar"><div style="width: 80%"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Pickaxe + Particles -->
+    <div class="pickaxe-group">
+      <img src="rightPick.png" class="pickaxe-right" alt="Pickaxe Right">
+      <div class="particles-right">
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+      </div>
+    </div>
+  </div>
+</section>
 <script src="script.js"></script>
 
-<!-- Floating Enderman Toggle -->
 <!-- Floating Enderman Toggle -->
 <div id="endermanToggle" onclick="toggleDarkMode()">
   <img id="endermanImg" src="BlackEnder.png" alt="Enderman Toggle">

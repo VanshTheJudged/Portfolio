@@ -384,12 +384,15 @@ body {
 /*My Experience Starts from here*/
 
 .experience-section {
-  padding: 60px 40px; /* add more horizontal padding */
+  padding: 60px 40px;
   background-color: #fff;
   color: #000;
   text-align: center;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
+
 
 .section-title {
   font-size: 2rem;
@@ -466,12 +469,23 @@ body {
 /*Here My Portfolio Project Show Case Starts*/
 
 .projects-section {
-    
   padding: 60px 40px;
   text-align: center;
   background: #fff;
   width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
+
+/* Proper centering for internal containers */
+/* .experience-section .timeline,
+.projects-section .project-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 
 .projects-section h2 {
   font-size: 2.5rem;
@@ -494,10 +508,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  max-width: 1500px;
-  margin: auto;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
+  text-align: left; /* optional for better card text */
 }
+
 
 .project-card {
   flex: 1;
@@ -808,4 +825,149 @@ body.dark-mode .enderman-icon img.white-version {
 
 #endermanToggle:hover img {
   transform: scale(1.1);
+}
+
+/*Skill profenciancy starts here*/
+
+.proficiency-section {
+  padding: 3rem 1rem;
+  background: var(--section-bg, #fff);
+  color: var(--text-color, #000);
+  text-align: center;
+}
+
+.proficiency-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.proficiency-card {
+  background-color: #cc5500; /* dark orange */
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.skill-bar {
+  margin-top: 1rem;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.bar {
+  background: #fff;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.bar > div {
+  background: #b76df7;
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+body.dark-mode .proficiency-section {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .proficiency-card {
+  background-color: #1e1e1e;
+}
+
+/*PickAxe Animation*/
+.pickaxe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.pickaxe-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pickaxe-left, .pickaxe-right {
+  width: 200px;
+  animation: swing 0.6s ease-in-out infinite alternate;
+  z-index: 1;
+  position: relative;
+}
+
+.pickaxe-left {
+  transform: rotate(-40deg);
+}
+
+.pickaxe-right {
+  transform: rotate(40deg);
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(15deg); }
+}
+
+/* Particles Containers */
+.particles-left,
+.particles-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.particles-left {
+  left: 170px;
+}
+
+.particles-right {
+  right: 200px;
+}
+
+/* Particle Styling */
+.particle {
+  width: 20px;
+  height: 20px;
+  background: #d7c48a;
+  border: 2px solid #5a4c2a;
+  border-radius: 2px;
+  position: absolute;
+  opacity: 0;
+  animation: explode 1.2s ease-out infinite;
+}
+
+.particle:nth-child(1) { animation-delay: 0s; top: -10px; left: -10px; }
+.particle:nth-child(2) { animation-delay: 0.2s; top: 10px; left: -10px; }
+.particle:nth-child(3) { animation-delay: 0.4s; top: -10px; left: 10px; }
+.particle:nth-child(4) { animation-delay: 0.6s; top: 10px; left: 10px; }
+
+@keyframes explode {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5) translate(30px, -30px);
+    opacity: 0;
+  }
 }
