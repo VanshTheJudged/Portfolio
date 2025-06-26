@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -34,7 +35,7 @@
     </nav>
   </header>
 
- <section class="hero-v3">
+ <section class="hero-v3" id="home" data-aos="fade-up" data-aos-duration="1000">
   <div class="hello-outline">Hello!</div>
   <div class="hero-main-row">
     <!-- Left: Quote -->
@@ -68,7 +69,7 @@
   </div>
 </section> -->
 
-<section class="skills-section">
+<section class="skills-section" id="about" data-aos="zoom-in-up" data-aos-duration="1000">
   <h2 class="skill-outline"><span class="highlight-orange">My</span> Skills</h2>
   <p class="skills-subtext">Here’s what I’m great at and where I bring value.</p>
 
@@ -101,7 +102,8 @@
     </div>
   </div>
 </section>
-<section class="experience-section">
+<div class="pixel-divider"></div>
+<section class="experience-section" id="resume" data-aos="fade-up" data-aos-duration="1000">
   <h2 class="section-title">My Work Experience</h2>
 
   <div class="timeline">
@@ -132,7 +134,8 @@
     </div>
   </div>
 </section>
-<section class="projects-section">
+<div class="pixel-divider"></div>
+<section class="projects-section" id="projects" data-aos="zoom-in" data-aos-duration="1000">
   <h2>Let’s Have a Look at my <span class="highlight">Projects</span></h2>
 
   <div class="project-container">
@@ -143,12 +146,11 @@
 
   <button class="see-more">See More ↗</button>
 </section>
-
-<section class="proficiency-section">
+<div class="pixel-divider"></div>
+<section class="proficiency-section" data-aos="fade-up" data-aos-duration="1000">
   <div class="pickaxe-wrapper">
-
     <!-- Left Pickaxe + Particles -->
-    <div class="pickaxe-group">
+    <div class="pickaxe-group" data-aos="fade-right" data-aos-delay="600">
       <img src="leftPick.png" class="pickaxe-left" alt="Pickaxe Left">
       <div class="particles-left">
         <span class="particle"></span>
@@ -159,7 +161,7 @@
     </div>
 
     <!-- Technical Proficiency Content -->
-    <div class="proficiency-content">
+    <div class="proficiency-content" data-aos="zoom-in-up" data-aos-delay="600">
       <h2 class="section-title">My Technical Proficiency</h2>
       <div class="proficiency-grid">
         <!-- Frontend Card -->
@@ -192,7 +194,7 @@
     </div>
 
     <!-- Right Pickaxe + Particles -->
-    <div class="pickaxe-group">
+    <div class="pickaxe-group" data-aos="fade-left" data-aos-delay="600">
       <img src="rightPick.png" class="pickaxe-right" alt="Pickaxe Right">
       <div class="particles-right">
         <span class="particle"></span>
@@ -203,11 +205,37 @@
     </div>
   </div>
 </section>
+<div class="pixel-divider"></div>
+
+<section class="contact-modern">
+  <div class="contact-left">
+    <h2>Let’s Connect</h2>
+    <p class="form-subtext">Want to collaborate or say hi? Drop your message below.</p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  <div class="contact-right">
+    <div class="glass-effect">
+      <img src="Contact.jpg" alt="Vansh Display" class="glass-image" />
+      <p>"I build ideas with code — tell me yours."</p>
+      <span class="glass-quote">– Vansh, Software Dev</span>
+    </div>
+  </div>
+</section>
 <script src="script.js"></script>
 
 <!-- Floating Enderman Toggle -->
 <div id="endermanToggle" onclick="toggleDarkMode()">
   <img id="endermanImg" src="BlackEnder.png" alt="Enderman Toggle">
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
