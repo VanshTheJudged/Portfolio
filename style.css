@@ -1889,6 +1889,13 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
   .behind-text{
     font-size: 2rem;
   }
+  .character-img {
+    margin-top: -70px; /* Adjust as needed */
+    margin-left: 10px;
+    width: 300px;
+    z-index: 1;
+    position: relative;
+  }
 }
 .contact-modern h2,
 .contact-modern .form-subtext,
