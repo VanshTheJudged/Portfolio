@@ -1311,9 +1311,8 @@ body.dark-mode .mobile-header {
   border: none;
   color: white;
   cursor: pointer;
-
   /* This is the key fix */
-  margin-left: 300px;
+  margin-left: 200px;
 }
 
 
@@ -1804,7 +1803,7 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
   }
   .mobile-header {
     height: 10px;
-    padding: 4px 8px; /* Smaller padding */
+    padding: 1px 0px; /* Smaller padding */
   }
 
   .mobile-header .logo {
@@ -1886,6 +1885,9 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
   /* Dark mode override */
   body.dark-mode .mobile-menu {
     background-color: #1e1e1e;
+  }
+  .behind-text{
+    font-size: 2rem;
   }
 }
 .contact-modern h2,
