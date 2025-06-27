@@ -1,6 +1,8 @@
 
 body {
-  margin: 0;
+  /* scroll-behavior: smooth; */
+  margin: 10px;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -1210,6 +1212,7 @@ body.dark-mode .pixel-divider {
 }
 @media (max-width: 768px) {
   .contact-modern {
+    margin-top: -50px;
     flex-direction: column;
     align-items: center;
   }
@@ -1227,3 +1230,600 @@ body.dark-mode .pixel-divider {
   width: 80%;
   overflow-x: hidden;
 }
+/*Mobile Nav Bar*/
+/* Hide mobile header by default */
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #111;
+  color: white;
+}
+
+.mobile-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.hamburger-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: #111;
+  padding: 10px 20px;
+  list-style: none;
+}
+
+.mobile-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Toggle show */
+.mobile-menu.show {
+  display: flex;
+}
+
+/* Desktop view - hide mobile UI */
+@media screen and (min-width: 768px) {
+  .mobile-header,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Mobile view - hide desktop UI */
+/* === Mobile Header === */
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode .mobile-header {
+  background-color: #1e1e1e;
+}
+
+.mobile-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Pixelify Sans', sans-serif;
+  margin-right: 10px; /* optional */
+}
+
+
+.hamburger-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  /* This is the key fix */
+  margin-left: 300px;
+}
+
+
+/* Dropdown Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  padding: 10px 20px;
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 999;
+  border: 1px solid #444;
+  border-radius: 8px;
+  width: max-content;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.mobile-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Show menu */
+.mobile-menu.show {
+  display: flex;
+}
+
+/* Only show on small screens */
+@media screen and (max-width: 767px) {
+  .nav-left,
+  .nav-right,
+  .logo {
+    display: none !important;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+}
+
+/* Hide mobile UI on desktop */
+@media screen and (min-width: 768px) {
+  .mobile-header,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/*Hero Section for mobile*/
+@media (max-width: 768px) {
+  .hero-main-row {
+    gap: -100px; /* Reduce the space between child divs */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-box {
+    margin-bottom: -120px;
+    order: 1;
+    position: relative;
+  }
+
+  .circle-bg {
+    width: 250px;
+    height: 250px;
+    background: rgb(255, 81, 0);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .character-img {
+    margin-top: -100px; /* Adjust as needed */
+    margin-left: 10px;
+    width: 300px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .hero-left {
+    order: 2;
+    margin-top: 0px;
+  }
+
+  .hero-right {
+    order: 3;
+    margin-top: 10px;
+  }
+}
+/*Skill Section*/
+/* Shared styles (used by both desktop & mobile) */
+/* .skill-outline {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.skills-subtext {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.highlight-orange {
+  color: orange;
+}
+.skillcard-text {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin: 5px 0;
+} */
+
+/* Desktop version (default)
+.skills-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.skill-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+}
+.card-stack img {
+  width: 100px;
+} */
+
+/* Hide mobile section by default */
+.skills-section-mobile {
+  display: none;
+}
+
+/* Mobile styles */
+.skill-outline {
+  text-align: center;
+  font-size: 2.2rem; /* Increase size */
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .card-stack img {
+    width: 2000px; /* Bigger for mobile if you want */
+  }
+  .skill-slide img {
+  width: 1200px;
+  height: auto;
+}
+.card-stack img,
+.skill-slide img {
+  transition: transform 0.3s ease;
+}
+.card-stack img:hover,
+.skill-slide img:hover {
+  transform: scale(1.1);
+}
+
+    .skill-outline {
+    font-size: 2.5rem;
+  }
+  /* Hide desktop version */
+  .desktop-skills {
+    display: none;
+  }
+   .skills-text {
+    color: white;
+  }
+  .skills-section-mobile {
+    margin-bottom: -10px; /*Reduced bottom space*/
+    display: block;
+    padding: 20px;
+  }
+
+  .skills-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .skill-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background-color: #1a1a1a;
+    margin-right: 10px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+      /* Existing styles... */
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill-slide img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .skill-slide p {
+    font-size: 1rem;
+    color: white;
+  }
+  .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.slider-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: #555;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.slider-dots span.active {
+  background-color: orange;
+}
+.skill-slide:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+}
+.skills-slider::-webkit-scrollbar {
+  display: none;
+}
+.skills-slider {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.skills-section-mobile {
+  background: linear-gradient(to bottom, #111, #1f1f1f);
+}
+.skill-slide p {
+  font-family: 'Pixelify Sans', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.skills-section,
+.skills-section-mobile {
+  text-align: center;
+  margin-top: -250px; /* Decrease top margin */
+    padding-top: 10px;
+}
+}
+/* mobiile responsive Work Experience
+
+/* Mobile responsiveness for experience section */
+/* Hide mobile section by default */
+.experience-section-mobile {
+  margin-top: -55px;
+  display: none;
+  margin-bottom: -55px;
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop version */
+  .experience-section {
+    display: none;
+  }
+
+  .experience-section-mobile {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .experience-section-mobile .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .experience-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    color: white;
+  }
+
+  .experience-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+
+  .orange-dot {
+    background-color: orange;
+  }
+
+  .dark-dot {
+    background-color: gray;
+  }
+
+  .exp-role {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 5px 0 10px;
+  }
+
+  .exp-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+}
+/* Project Section
+/* ✅ Hide on desktop */
+.projects-section-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* ✅ Hide desktop version */
+  .projects-section {
+    display: none;
+  }
+  /* 🌞 Light mode project section styles */
+/* 🌞 Light mode with Off-White Theme for Mobile Project Section */
+body:not(.dark-mode) .mobile-projects-section {
+  background-color: #a8a7a7;  /* Off-white background */
+  color: #111;
+}
+body:not(.dark-mode) .mobile-project-card .features-title,
+body:not(.dark-mode) .mobile-project-card .feature-list li {
+  color: #000 !important;
+}
+body:not(.dark-mode) .mobile-project-card {
+  background-color: #ffffff;  /* Card stays clean white for contrast */
+  color: #111;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark-mode) .mobile-project-card .tags span {
+  background-color: #e8e8e8;  /* Soft gray tag */
+  color: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 4px;
+  font-size: 0.85rem;
+}
+
+body:not(.dark-mode) .mobile-project-card .features-title {
+  color: #000;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+body:not(.dark-mode) .mobile-project-card .feature-list li {
+  color: #000;
+}
+
+body:not(.dark-mode) .mobile-project-card .project-images img {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+
+  .mobile-project-card .project-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .mobile-project-card .project-images img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .projects-section-mobile {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .mobile-project-card {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90vw;
+    margin: auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-project-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+
+  .mobile-project-card .tags span {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+  }
+
+  .mobile-project-card .features-title {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .mobile-project-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .mobile-project-card li {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .mobile-nav-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .mobile-nav-btns button {
+    background: orange;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  body:not(.dark-mode) .mobile-project-card .features-title,
+  body:not(.dark-mode) .mobile-project-card .feature-list li,
+  body:not(.dark-mode) .mobile-project-card li {
+    color: #000 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    margin-bottom: 55px; /* Reduce bottom spacing */
+  }
+
+  .projects-section-mobile {
+    margin-top: -55px; /* Reduce top spacing */
+  }
+   .proficiency-section {
+    margin-top: 10px; /* reduce space above proficiency section */
+    margin-bottom: -55px;
+  }
+
+  .lets-chat-section {
+    margin-top: -55px; /* optional: reduce space below the "Let’s Chat" section */
+  }
+  #endermanToggle img,
+  #endermanImg {
+    width: 140px;   /* or any size you prefer */
+    height: 180px;
+  }
+
+  #endermanToggle {
+    bottom: 20px; /* optional: adjust position if needed */
+    right: 1px;
+  }
+  .mobile-header {
+    height: 10px;
+    padding: 4px 8px; /* Smaller padding */
+  }
+
+  .mobile-header .logo {
+    font-size: 1rem; /* Smaller logo text */
+    width: auto;       /* Let it size naturally */
+  max-width: 20%;    /* Prevent overflow */
+  }
+
+  .mobile-header .menu-icon {
+    font-size: 1rem; /* Smaller menu icon */
+     width: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+}
+
+
+
+
+

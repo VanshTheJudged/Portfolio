@@ -32,6 +32,22 @@
           </ul>
         </li>
       </ul>
+<!-- Mobile Header -->
+<div class="mobile-header">
+  <div class="mobile-logo">Vansh</div>
+  <button class="hamburger-btn" onclick="toggleMobileMenu()">☰</button>
+</div>
+
+<ul class="mobile-menu" id="mobileMenu">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#resume">Resume</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+  <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+  <li><a href="https://geeksforgeeks.org" target="_blank">GeeksforGeeks</a></li>
+</ul>
+
     </nav>
   </header>
 
@@ -69,39 +85,59 @@
   </div>
 </section> -->
 
-<section class="skills-section" id="about" data-aos="zoom-in-up" data-aos-duration="1000">
+<!-- ✅ Desktop Skills Section -->
+<section class="skills-section desktop-skills" id="about" data-aos="zoom-in-up" data-aos-duration="1000">
   <h2 class="skill-outline"><span class="highlight-orange">My</span> Skills</h2>
   <p class="skills-subtext">Here’s what I’m great at and where I bring value.</p>
 
   <div class="skills-cards">
     <!-- Skill 1 -->
     <div class="skill-card">
-      <div class="card-stack">
-        <img src="Backend.png" alt="API Development"/>
-      </div>
-      <h3 class = "skillcard-text">“APIs that just work”</h3>
-      <h3 class = "skillcard-text">“Powerful logic behind the scenes”</h3>
-      
+      <div class="card-stack"><img src="Backend.png" alt="API Development"/></div>
+      <h3 class="skillcard-text">“APIs that just work”</h3>
+      <h3 class="skillcard-text">“Powerful logic behind the scenes”</h3>
     </div>
-
-    <!-- Skill 2 - highlighted center -->
+    <!-- Skill 2 -->
     <div class="skill-card">
-      <div class="card-stack">
-        <img src="DBMS.png" alt="DBMS"/>
-      </div>
-      <h3 class = "skillcard-text">“Data that flows like water”</h3>
+      <div class="card-stack"><img src="DBMS.png" alt="DBMS"/></div>
+      <h3 class="skillcard-text">“Data that flows like water”</h3>
     </div>
-
     <!-- Skill 3 -->
     <div class="skill-card">
-      <div class="card-stack">
-        <img src="Frontend.png" alt="Frontend Development"/>
-      </div>
-      <h3 class = "skillcard-text">“Pixel-perfect interfaces”</h3>
-      
+      <div class="card-stack"><img src="Frontend.png" alt="Frontend Development"/></div>
+      <h3 class="skillcard-text">“Pixel-perfect interfaces”</h3>
     </div>
   </div>
 </section>
+
+<!-- ✅ Mobile Skills Section -->
+<section class="skills-section-mobile">
+  <h2 class="skill-outline"><span class="highlight-orange">My</span><span class="skills-text"> Skills</span></h2>
+  <p class="skills-subtext">Swipe to explore my skillset</p>
+
+  <div class="skills-slider" data-aos="fade-up" data-aos-duration="800">
+    <div class="skill-slide">
+      <img src="Backend.png" alt="API Development">
+      <p>“APIs that just work”<br>“Powerful logic behind the scenes”</p>
+    </div>
+    <div class="skill-slide">
+      <img src="DBMS.png" alt="DBMS">
+      <p>“Data that flows like water”</p>
+    </div>
+    <div class="skill-slide">
+      <img src="Frontend.png" alt="Frontend Development">
+      <p>“Pixel-perfect interfaces”</p>
+    </div>
+  </div>
+  <!-- Just below your slider -->
+<div class="slider-dots">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+</section>
+
 <div class="pixel-divider"></div>
 <section class="experience-section" id="resume" data-aos="fade-up" data-aos-duration="1000">
   <h2 class="section-title">My Work Experience</h2>
@@ -134,6 +170,46 @@
     </div>
   </div>
 </section>
+<!-- Mobile Version -->
+<section class="experience-section-mobile">
+  <h2 class="section-title">My Work Experience</h2>
+
+  <div class="experience-card">
+    <div class="experience-dot orange-dot"></div>
+    <h3>Smart India Hackathon (SIH)</h3>
+    <p class="exp-role">Team Leader • Mar 2024 – July 2024</p>
+    <h4>Led a team of 6</h4>
+    <p class="exp-desc">Secured 7th position in DTU inter-college round with a hospital management solution during SIH.</p>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-dot dark-dot"></div>
+    <h3>Feat: The Career Institute</h3>
+    <p class="exp-role">Intern • June 2025 – July 2025</p>
+    <h4>Backend Developer Intern</h4>
+    <p class="exp-desc">Worked on developing REST APIs and integrating backend systems to support the web platform.</p>
+  </div>
+</section>
+<!-- Mobile Version -->
+<!-- <section class="experience-section-mobile">
+  <h2 class="section-title">My Work Experience</h2>
+
+  <div class="experience-card">
+    <div class="experience-dot orange-dot"></div>
+    <h3>Smart India Hackathon (SIH)</h3>
+    <p class="exp-role">Team Leader • Mar 2024 – July 2024</p>
+    <h4>Led a team of 6</h4>
+    <p class="exp-desc">Secured 7th position in DTU inter-college round with a hospital management solution during SIH.</p>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-dot dark-dot"></div>
+    <h3>Feat: The Career Institute</h3>
+    <p class="exp-role">Intern • June 2025 – July 2025</p>
+    <h4>Backend Developer Intern</h4>
+    <p class="exp-desc">Worked on developing REST APIs and integrating backend systems to support the web platform.</p>
+  </div>
+</section> -->
 <div class="pixel-divider"></div>
 <section class="projects-section" id="projects" data-aos="zoom-in" data-aos-duration="1000">
   <h2>Let’s Have a Look at my <span class="highlight">Projects</span></h2>
@@ -146,6 +222,25 @@
 
   <button class="see-more">See More ↗</button>
 </section>
+<!-- ✅ Mobile Project Section -->
+<section class="projects-section-mobile" id="projects-mobile">
+  <h2>Let’s Have a Look at my <span class="highlight">Projects</span></h2>
+
+  <div class="mobile-project-slider">
+    <div class="mobile-project-card" id="mobileProjectDisplay">
+      <!-- JS will inject content here -->
+    </div>
+  </div>
+
+  <div class="mobile-nav-btns">
+    <button onclick="prevMobileProject()">&#8592;</button>
+    <button onclick="nextMobileProject()">&#8594;</button>
+  </div>
+
+  <button class="see-more">See More ↗</button>
+</section>
+
+
 <div class="pixel-divider"></div>
 <section class="proficiency-section" data-aos="fade-up" data-aos-duration="1000">
   <div class="pickaxe-wrapper">
@@ -211,12 +306,25 @@
   <div class="contact-left">
     <h2>Let’s Connect</h2>
     <p class="form-subtext">Want to collaborate or say hi? Drop your message below.</p>
-    <form class="contact-form">
+
+    <!-- ✅ Added action + method -->
+    <form class="contact-form" action="https://formspree.io/f/xdkzyevv" method="POST">
+      
+      <!-- Your Name -->
       <input type="text" name="name" placeholder="Your Name" required />
+      
+      <!-- ✅ Email Field -->
+      <input type="email" name="email" placeholder="Your Email" required />
+      
+      <!-- Message -->
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+      <!-- Submit -->
       <button type="submit">Send Message</button>
     </form>
   </div>
+
+  <!-- ✅ This stays unchanged -->
   <div class="contact-right">
     <div class="glass-effect">
       <img src="Contact.jpg" alt="Vansh Display" class="glass-image" />
@@ -225,6 +333,7 @@
     </div>
   </div>
 </section>
+
 <script src="script.js"></script>
 
 <!-- Floating Enderman Toggle -->

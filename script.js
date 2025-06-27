@@ -75,4 +75,47 @@ function toggleDarkMode() {
   endermanImg.src = isDark ? 'WhiteEnder.png' : 'BlackEnder.png';
 }
 
+/*For mobile header*/
+function toggleMobileMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
 
+/*Mobile project section*/
+const mobileProjects = [...projects]; // reuse same array
+
+let currentMobile = 0;
+
+function updateMobileProject() {
+  const proj = mobileProjects[currentMobile];
+  const display = document.getElementById("mobileProjectDisplay");
+  display.innerHTML = `
+    <div class="project-images">
+      <img src="${proj.images[0]}" alt="Project Image 1" />
+      <img src="${proj.images[1]}" alt="Project Image 2" />
+    </div>
+    <div class="tags">
+      ${proj.tags.map(tag => `<span>${tag}</span>`).join('')}
+    </div>
+    <h3>${proj.title}</h3>
+    <p>${proj.description}</p>
+    <h4 class="features-title">Key Features</h4>
+    <ul>
+      ${proj.keyFeatures.map(f => `<li>✅ ${f}</li>`).join('')}
+    </ul>
+  `;
+}
+
+function nextMobileProject() {
+  currentMobile = (currentMobile + 1) % mobileProjects.length;
+  updateMobileProject();
+}
+
+function prevMobileProject() {
+  currentMobile = (currentMobile - 1 + mobileProjects.length) % mobileProjects.length;
+  updateMobileProject();
+}
+
+window.onload = () => {
+  updateProject();        // for desktop
+  updateMobileProject();  // for mobile
+};
