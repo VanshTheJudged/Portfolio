@@ -119,3 +119,18 @@ window.onload = () => {
   updateProject();        // for desktop
   updateMobileProject();  // for mobile
 };
+
+/*Audio Function*/
+document.addEventListener('DOMContentLoaded', () => {
+  const clickSound = document.getElementById('clickSound');
+
+  document.querySelectorAll('button, a, .clickable, .see-more, .carousel-btn').forEach(el => {
+    el.addEventListener('click', () => {
+      if (clickSound) {
+        const clone = clickSound.cloneNode(); // create a new audio instance
+        clone.play().catch(() => {});
+      }
+    });
+  });
+});
+
