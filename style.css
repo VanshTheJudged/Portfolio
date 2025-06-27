@@ -1822,8 +1822,89 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
   justify-content: center;
   }
 }
+/* Ensure parent is positioned */
+.dropdown {
+  position: relative;
+}
 
+/* Hide dropdown by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1e1e1e;
+  min-width: 160px;
+  z-index: 999;
+  padding: 10px 0;
+  border-radius: 8px;
+}
 
+/* Keep it visible on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
+/* Ensure dropdown stays visible when hovered */
+.dropdown-content:hover {
+  display: block;
+}
 
+/* Style links inside dropdown */
+.dropdown-content li a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
 
+.dropdown-content li a:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: absolute;
+    top: 30px; /* move menu UP (reduce this number if it’s too low) */
+    right: -20px; /* move menu LEFT or RIGHT */
+    background-color: #000; /* Light mode background */ /* dark mode-friendly */
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 999;
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+  }
+
+  .mobile-menu li {
+    margin-bottom: 10px;
+  }
+
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  /* Dark mode override */
+  body.dark-mode .mobile-menu {
+    background-color: #1e1e1e;
+  }
+}
+.contact-modern h2,
+.contact-modern .form-subtext,
+.contact-modern input,
+.contact-modern textarea,
+.contact-modern button {
+  font-family: 'Pixelify Sans', cursive;
+}
+.logo {
+    font-family: 'Pixelify Sans', cursive;
+}
+.skill-outline{
+    font-family: 'Pixelify Sans', cursive;
+}
+
+.section-title{
+    font-family: 'Pixelify Sans', cursive;
+}
+.project-head{
+    font-family: 'Pixelify Sans', cursive;   
+}
