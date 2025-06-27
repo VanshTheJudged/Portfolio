@@ -118,7 +118,7 @@ body {
 }
 
 .dropdown-content li a:hover {
-  background-color: #333;
+  background-color: #000;
   color: #ff6600; /* Darker orange on hover */
 }
 
@@ -1832,7 +1832,7 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #1e1e1e;
+  background-color: #000;
   min-width: 160px;
   z-index: 999;
   padding: 10px 0;
@@ -1858,7 +1858,7 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
 }
 
 .dropdown-content li a:hover {
-  background-color: #333;
+  background-color: #000;
   border-radius: 5px;
 }
 @media (max-width: 768px) {
@@ -1916,4 +1916,25 @@ body:not(.dark-mode) .mobile-project-card .project-images img {
 }
 .project-head{
     font-family: 'Pixelify Sans', cursive;   
+}
+/* 🔽 Default (light mode) dropdown background */
+.dropdown-content {
+  background-color: #000; /* Light mode: black */
+  color: white;
+  list-style: none;
+  padding-left: 0; /* Optional: aligns text better */
+  margin: 0; /* Optional: remove default spacing */
+}
+
+/* 🌙 Dark mode dropdown background */
+body.dark-mode .dropdown-content {
+  background-color: #1e1e1e; /* Dark mode: darker gray */
+}
+.dropdown-content li {
+  list-style: none; /* Just in case */
+}
+.dropdown-content li a {
+  text-decoration: none;
+  color: white; /* or black for light mode */
+  display: block;
 }
